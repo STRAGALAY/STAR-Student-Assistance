@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.1s ease;
+}
+
+html {
+  /* background: linear-gradient(
+    to right,
+    red 20%,
+    orange 20% 40%,
+    yellow 40% 60%,
+    green 60% 80%,
+    blue 80%
+  ); */
+  /* background: linear-gradient(90deg, white, darkgray); */
+  background-color: whitesmoke;
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.app {
+  --header-background: #acacac;
+  --header-height: 5rem;
+
+  --clean-box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+    0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+  --clean-box-shadow-light: 0px 0px 0px 0px rgb(0 0 0 / 20%),
+    0px 0px 0px 0px rgb(0 0 0 / 14%), 0px 1px 1px 0px rgb(0 0 0 / 12%);
+
+  /* blue-themed colour composition */
+  --blue-comp-1: #13293d;
+  --blue-comp-2: #006494;
+  --blue-comp-3: #247ba0;
+  --blue-comp-4: #1b98e0;
+  --blue-comp-5: #e8f1f2;
+}
+
+.header {
+  display: flex;
+
+  padding: 0.8rem;
+  font-size: 1.3rem;
+  border-top: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+}
+
+.header .brand-label {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* imports -------------------------------- */
+@import "./styles/comps.css";
