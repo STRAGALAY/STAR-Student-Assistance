@@ -14,13 +14,12 @@ export default function App() {
 
   return (
     <div className="app">
-      <div>{count}</div>
+      {/* <div>{count}</div>
       <button onClick={() => setCount((p) => p + 1)}>Up 1</button>
       <button onClick={() => setCount((p) => p - 1)}>Down 1</button>
 
-      <div>alksjd</div>
+      <div>alksjd</div> */}
 
-      <MainPage />
     </div>
   );
 }

@@ -56,9 +56,9 @@ function MainPage() {
       <div className="docs">
         <div ref={allText} className="y">
           <div ref={googleRef} className="docheader">
-            Google
+            STAR
           </div>
-          <div className="docheaderg">Docs</div>
+          <div className="docheaderg">&#8212;asd</div>
         </div>
         <form className="search-form" onSubmit={handleSubmit}>
           <input
