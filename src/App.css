@@ -53,3 +53,91 @@ html {
 
 /* imports -------------------------------- */
 @import "./styles/comps.css";
+
+* {
+  transition: 0.25s ease-in-out;
+ 
+}
+
+.docs {
+  border: solid 1px;
+  display: flex;
+  padding-left: 70px;
+  padding-right: 160vmin;
+  cursor: pointer;
+  position: absolute;
+  background-color: white;
+
+}
+
+.y {
+  display: flex;
+}
+
+.docheader {
+    font-size: 30px;
+    font-weight: bold;
+    color: darkgrey;
+  }
+
+.col {
+  color: black;
+}
+
+.y:hover {
+  background-color: lightgrey;
+}
+
+
+.docheaderg {
+  font-size: 30px;
+}
+
+.profiles {
+    display: none;
+    top: 25vmax;
+    right: 25vmax;
+    background-color: darkgrey;
+    padding: 50px;
+    border: solid;
+    
+    
+    
+}
+
+.asd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bruh {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 100;
+  width: 20vw;
+  height: 60vh;
+  padding: 1rem;
+  background-color: gray;
+
+ 
+}
+
+.search-form {
+  display: flex;
+}
+
+.pfppic {
+  border-radius: 50%;
+}
+
+.mathfolder {
+  position: absolute;
+}
