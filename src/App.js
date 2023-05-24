@@ -15,6 +15,9 @@ export default function App() {
       <div>{count}</div>
       <button onClick={() => setCount((p) => p + 1)}>Up 1</button>
       <button onClick={() => setCount((p) => p - 1)}>Down 1</button>
+      <a href="/something">
+        <button>aksdsad</button>
+      </a>
 
       <div>alksjd</div>
     </div>

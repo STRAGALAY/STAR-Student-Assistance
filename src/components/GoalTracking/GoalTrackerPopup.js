@@ -1,8 +1,7 @@
-
 export default function GoalTrackerPopup() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      <div></div>
+    </div>
+  );
 }

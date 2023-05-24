@@ -28,14 +28,13 @@ export default function TemporaryDrawer({ drawerItems, ...rest }) {
       </Button>
 
       <Drawer
-        className="play-drawer"
         anchor={"left"}
         open={anchorOpen}
         onClose={toggleDrawer}
         onMouseLeave={toggleDrawer}
         {...rest}
       >
-        <List className="anchor-list">
+        <List {...rest}>
           {drawerItems.map(
             // rename the component to react node and take the rest of the props separately
             ({ icon: DrawerItemIcon, ...drawerItem }) => (
