@@ -54,40 +54,40 @@ html {
 /* imports -------------------------------- */
 @import "./styles/comps.css";
 
-* {
-  transition: 0.25s ease-in-out;
+.header-2 {
 }
 
-.docs {
-  border: solid 1px;
+.header-nav {
+  height: 100%;
+}
+
+.brand-name {
   display: flex;
-  padding-left: 70px;
-  padding-right: 160vmin;
-  cursor: pointer;
-  position: absolute;
-  background-color: white;
+  padding: 0.5rem;
 }
-
-.docheader {
+.brand-name:hover {
+  background-color: lightgrey;
+}
+.brand-name-1 {
   font-size: 30px;
   font-weight: bold;
   color: darkgrey;
 }
+.brand-name-2 {
+  font-size: 30px;
+}
+
+.docs {
+  display: flex;
+
+  background-color: white;
+  border: solid 1px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
 
 .col {
   color: black;
-}
-
-.y {
-  display: flex;
-  width: 15vw;
-}
-.y:hover {
-  background-color: lightgrey;
-}
-
-.docheaderg {
-  font-size: 30px;
 }
 
 .profiles {
@@ -99,12 +99,23 @@ html {
   border: solid;
 }
 
-.asd {
+.search-form {
+  display: flex;
+}
+
+.pfppic {
+  border-radius: 50%;
+}
+
+.mathfolder {
+  position: absolute;
+}
+
+.profile-btn {
   display: flex;
   justify-content: flex-end;
 }
-
-.bruh {
+.profile-popup {
   position: absolute;
   right: 10px;
   top: 20px;
@@ -120,16 +131,4 @@ html {
   height: 60vh;
   padding: 1rem;
   background-color: gray;
-}
-
-.search-form {
-  display: flex;
-}
-
-.pfppic {
-  border-radius: 50%;
-}
-
-.mathfolder {
-  position: absolute;
 }

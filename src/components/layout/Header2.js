@@ -1,4 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
+import TemporaryDrawer from "../TemporaryDrawer";
+import { ListItemIcon } from "@mui/material";
 
 function MainPage() {
   const allText = useRef();
@@ -31,35 +33,22 @@ function MainPage() {
   };
 
   return (
-    <div>
-      <div className="asd">
-        <button
-          onClick={() => setPopupOpen((prev) => !prev)}
-          className="pfpbutton"
-        >
-          Open
-        </button>
-        {popupOpen && (
-          <div className="bruh">
-            <img
-              className="pfppic"
-              src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"
-              width="100"
-              height="100"
-            ></img>
-            <h1>profiles</h1>
-            <p>johnny</p>
-          </div>
-        )}
-      </div>
-
+    <div className="header-2">
       <div className="docs">
-        <div ref={allText} className="y">
-          <div ref={googleRef} className="docheader">
+        <TemporaryDrawer
+          classList="header-nav"
+          drawerItems={[
+            { text: "asadsd", icon: ListItemIcon, onClick: () => null },
+            { text: "tttttttttttt", icon: ListItemIcon, onClick: () => null },
+          ]}
+        />
+        <div ref={allText} className="brand-name">
+          <div ref={googleRef} className="brand-name-1">
             STAR
           </div>
-          <div className="docheaderg">&#8212;asd</div>
+          <div className="brand-name-2">&#8212;SA</div>
         </div>
+
         <form className="search-form" onSubmit={handleSubmit}>
           <input
             type="text"
@@ -71,7 +60,32 @@ function MainPage() {
           />
           <button className="search-button">search</button>
         </form>
+
+        <div className="profile-btn">
+          <button
+            onClick={() => setPopupOpen((prev) => !prev)}
+            className="pfpbutton"
+          >
+            Open
+          </button>
+        </div>
       </div>
+
+      {/* profile popup */}
+      <>
+        {popupOpen && (
+          <div className="profile-popup">
+            <img
+              className="pfppic"
+              src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"
+              width="100"
+              height="100"
+            ></img>
+            <h1>profiles</h1>
+            <p>johnny</p>
+          </div>
+        )}
+      </>
     </div>
   );
 }

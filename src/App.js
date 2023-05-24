@@ -1,7 +1,5 @@
 import "./App.css";
-import { useState, useEffect, useRef } from "react";
-import New from "./components/New";
-import MainPage from "./Clone";
+import { useState, useEffect } from "react";
 
 // npm set strict-ssl false
 
@@ -14,14 +12,11 @@ export default function App() {
 
   return (
     <div className="app">
-      {/* <div>{count}</div>
+      <div>{count}</div>
       <button onClick={() => setCount((p) => p + 1)}>Up 1</button>
       <button onClick={() => setCount((p) => p - 1)}>Down 1</button>
 
-      <div>alksjd</div> */}
-
+      <div>alksjd</div>
     </div>
   );
 }
-
-

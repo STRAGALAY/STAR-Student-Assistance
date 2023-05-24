@@ -14,7 +14,7 @@ import ListItemText from "@mui/material/ListItemText";
 //   onClick: () => void;
 // }
 
-export default function TemporaryDrawer({ drawerItems }) {
+export default function TemporaryDrawer({ drawerItems, ...rest }) {
   const [anchorOpen, setAnchorOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -33,6 +33,7 @@ export default function TemporaryDrawer({ drawerItems }) {
         open={anchorOpen}
         onClose={toggleDrawer}
         onMouseLeave={toggleDrawer}
+        {...rest}
       >
         <List className="anchor-list">
           {drawerItems.map(

@@ -3,17 +3,30 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 
 import App from "./App";
-// import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header2 from "./components/layout/Header2";
+import Footer from "./components/layout/Footer";
 
-import Header from "./Clone";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <Header2 />
+        <App />
+        {/* <Footer /> */}
+      </>
+    ),
+  },
+  { path: "/asd", element: <div>Bruh</div> },
+  { path: "*", element: <div>Nothing</div> },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Header />
-    <App />
-    {/* <Footer /> */}
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
