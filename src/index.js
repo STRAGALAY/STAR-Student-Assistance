@@ -21,6 +21,7 @@ const router = createBrowserRouter([
   },
   { path: "/asd", element: <div>Bruh</div> },
   { path: "*", element: <div>Nothing</div> },
+  {path: "/goals", element: <Footer/>},
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
