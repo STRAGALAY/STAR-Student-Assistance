@@ -20,6 +20,7 @@ const router = createBrowserRouter([
     ),
   },
   { path: "/asd", element: <div>Bruh</div> },
+  { path: "/dashboard", element: <h1>Dashboard</h1> },
   { path: "*", element: <div>Nothing</div> },
 ]);
 

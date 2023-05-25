@@ -36,7 +36,6 @@ function MainPage() {
     <div className="header-2">
       <div className="docs">
         <TemporaryDrawer
-          classList="header-nav"
           drawerItems={[
             { text: "asadsd", icon: ListItemIcon, onClick: () => null },
             { text: "tttttttttttt", icon: ListItemIcon, onClick: () => null },
