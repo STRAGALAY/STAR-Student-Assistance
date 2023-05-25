@@ -36,14 +36,14 @@ export default function TemporaryDrawer({ drawerItems, ...rest }) {
         <List style={{ width: "20vw" }}>
           {drawerItems.map(
             // rename the component to react node and take the rest of the props separately
-            ({ icon: DrawerItemIcon, ...drawerItem }) => (
+            ({ icon: Icon, ...drawerItem }) => (
               <ListItem
                 key={drawerItem.text}
                 button
                 onClick={drawerItem.onClick}
               >
                 <ListItemIcon>
-                  <DrawerItemIcon />
+                  <Icon />
                 </ListItemIcon>
                 <ListItemText primary={drawerItem.text} />
               </ListItem>

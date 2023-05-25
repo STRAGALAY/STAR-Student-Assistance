@@ -55,6 +55,13 @@ html {
 @import "./styles/comps.css";
 
 .header-2 {
+  display: flex;
+  align-items: center;
+
+  background-color: white;
+  border: solid 1px;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
 .brand-name {
@@ -71,15 +78,6 @@ html {
 }
 .brand-name-2 {
   font-size: 30px;
-}
-
-.docs {
-  display: flex;
-
-  background-color: white;
-  border: solid 1px;
-  padding: 0.5rem;
-  cursor: pointer;
 }
 
 .col {

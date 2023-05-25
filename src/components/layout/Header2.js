@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import TemporaryDrawer from "../TemporaryDrawer";
-import { ListItemIcon } from "@mui/material";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import Button from "@mui/material/Button";
 
 function MainPage() {
   const allText = useRef();
@@ -34,43 +35,40 @@ function MainPage() {
 
   return (
     <div className="header-2">
-      <div className="docs">
-        <TemporaryDrawer
-          drawerItems={[
-            { text: "asadsd", icon: ListItemIcon, onClick: () => null },
-            { text: "tttttttttttt", icon: ListItemIcon, onClick: () => null },
-          ]}
-        />
-        <div ref={allText} className="brand-name">
-          <div ref={googleRef} className="brand-name-1">
-            STAR
-          </div>
-          <div className="brand-name-2">&#8212;SA</div>
+      <TemporaryDrawer
+        drawerItems={[
+          { text: "qwe", icon: ListItemIcon, onClick: () => null },
+          { text: "tttttttttttt", icon: ListItemIcon, onClick: () => null },
+        ]}
+      />
+      <div ref={allText} className="brand-name">
+        <div ref={googleRef} className="brand-name-1">
+          STAR
         </div>
-
-        <form className="search-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder=""
-            value={input}
-            name="text"
-            className="search-input"
-            onChange={handleChange}
-          />
-          <button className="search-button">search</button>
-        </form>
-
-        <div className="profile-btn">
-          <button
-            onClick={() => setPopupOpen((prev) => !prev)}
-            className="pfpbutton"
-          >
-            Open
-          </button>
-        </div>
+        <div className="brand-name-2">&#8212;SA</div>
       </div>
 
-      {/* profile popup */}
+      <form className="search-form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder=""
+          value={input}
+          name="text"
+          className="search-input"
+          onChange={handleChange}
+        />
+        <Button className="search-button">Search</Button>
+      </form>
+
+      <div className="profile-btn">
+        <Button
+          onClick={() => setPopupOpen((prev) => !prev)}
+          className="pfpbutton"
+        >
+          Open
+        </Button>
+      </div>
+
       <>
         {popupOpen && (
           <div className="profile-popup">
