@@ -35,12 +35,14 @@ function MainPage() {
   return (
     <div className="header-2">
       <div className="docs">
-        <TemporaryDrawer
-          drawerItems={[
-            { text: "asadsd", icon: ListItemIcon, onClick: () => null },
-            { text: "tttttttttttt", icon: ListItemIcon, onClick: () => null },
-          ]}
-        />
+      <TemporaryDrawer
+        drawerItems={[
+          // <a href="asxd">ddd</a>
+          { text: "Goals", icon:ListItemIcon , onClick: () => null },
+          { text: "Course Folders", icon: ListItemIcon, onClick: () => null },
+          { text: "Resources", icon: ListItemIcon, onClick: () => null },
+        ]}
+      />
         <div ref={allText} className="brand-name">
           <div ref={googleRef} className="brand-name-1">
             STAR

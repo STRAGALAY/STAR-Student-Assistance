@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 import Header2 from "./components/layout/Header2";
 import Footer from "./components/layout/Footer";
+import TodoForm from './components/GoalTracking/Goalsorsoemthing'
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
   { path: "/asd", element: <div>Bruh</div> },
   { path: "/dashboard", element: <h1>Dashboard</h1> },
   { path: "*", element: <div>Nothing</div> },
-  {path: "/goals", element: <Footer/>},
+  {path: "/goals", element: <TodoForm />},
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
