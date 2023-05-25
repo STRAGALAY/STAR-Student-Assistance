@@ -35,15 +35,41 @@ function MainPage() {
 
   return (
     <div className="header-2">
+      <div className="docs">
       <TemporaryDrawer
         drawerItems={[
-          { text: "qwe", icon: ListItemIcon, onClick: () => null },
-          { text: "tttttttttttt", icon: ListItemIcon, onClick: () => null },
+          // <a href="asxd">ddd</a>
+          { text: "Goals", icon:ListItemIcon , onClick: () => null },
+          { text: "Course Folders", icon: ListItemIcon, onClick: () => null },
+          { text: "Resources", icon: ListItemIcon, onClick: () => null },
         ]}
       />
-      <div ref={allText} className="brand-name">
-        <div ref={googleRef} className="brand-name-1">
-          STAR
+        <div ref={allText} className="brand-name">
+          <div ref={googleRef} className="brand-name-1">
+            STAR
+          </div>
+          <div className="brand-name-2">&#8212;SA</div>
+        </div>
+
+        <form className="search-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder=""
+            value={input}
+            name="text"
+            className="search-input"
+            onChange={handleChange}
+          />
+          <button className="search-button">search</button>
+        </form>
+
+        <div className="profile-btn">
+          <button
+            onClick={() => setPopupOpen((prev) => !prev)}
+            className="pfpbutton"
+          >
+            Open
+          </button>
         </div>
         <div className="brand-name-2">&#8212;SA</div>
       </div>
