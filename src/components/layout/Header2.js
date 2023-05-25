@@ -3,7 +3,7 @@ import TemporaryDrawer from "../TemporaryDrawer";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Button from "@mui/material/Button";
 
-function MainPage() {
+export default function Header() {
   const allText = useRef();
   const googleRef = useRef();
   const [hovered, setHovered] = useState(false);
@@ -35,41 +35,17 @@ function MainPage() {
 
   return (
     <div className="header-2">
-      <div className="docs">
       <TemporaryDrawer
         drawerItems={[
           // <a href="asxd">ddd</a>
-          { text: "Goals", icon:ListItemIcon , onClick: () => null },
+          { text: "Goals", icon: ListItemIcon, onClick: () => null },
           { text: "Course Folders", icon: ListItemIcon, onClick: () => null },
           { text: "Resources", icon: ListItemIcon, onClick: () => null },
         ]}
       />
-        <div ref={allText} className="brand-name">
-          <div ref={googleRef} className="brand-name-1">
-            STAR
-          </div>
-          <div className="brand-name-2">&#8212;SA</div>
-        </div>
-
-        <form className="search-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder=""
-            value={input}
-            name="text"
-            className="search-input"
-            onChange={handleChange}
-          />
-          <button className="search-button">search</button>
-        </form>
-
-        <div className="profile-btn">
-          <button
-            onClick={() => setPopupOpen((prev) => !prev)}
-            className="pfpbutton"
-          >
-            Open
-          </button>
+      <div ref={allText} className="brand-name">
+        <div ref={googleRef} className="brand-name-1">
+          STAR
         </div>
         <div className="brand-name-2">&#8212;SA</div>
       </div>
@@ -109,14 +85,6 @@ function MainPage() {
           </div>
         )}
       </>
-    </div>
-  );
-}
-
-export default function App() {
-  return (
-    <div className="notes-app">
-      <MainPage />
     </div>
   );
 }
