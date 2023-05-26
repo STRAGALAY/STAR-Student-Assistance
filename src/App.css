@@ -67,6 +67,7 @@ html {
 .brand-name {
   display: flex;
   padding: 0.5rem;
+  margin-left: 60px;
 }
 .brand-name:hover {
   background-color: lightgrey;
@@ -108,11 +109,15 @@ html {
 .profile-btn {
   display: flex;
   justify-content: flex-end;
+
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
 }
 .profile-popup {
   position: absolute;
-  right: 10px;
-  top: 20px;
+  right: 20px;
+  top: 75px;
   border-radius: 25px;
 
   display: flex;

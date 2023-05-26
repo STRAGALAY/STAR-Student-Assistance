@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import TemporaryDrawer from "../TemporaryDrawer";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Button from "@mui/material/Button";
+import Person2Icon from "@mui/icons-material/Person2";
 
 export default function Header() {
   const allText = useRef();
@@ -67,6 +68,7 @@ export default function Header() {
           onClick={() => setPopupOpen((prev) => !prev)}
           className="pfpbutton"
         >
+          <Person2Icon/>
           Open
         </Button>
       </div>

@@ -26,6 +26,10 @@ export default function TodoForm(props) {
       <div class="todo-container">
         <ul class="todo-list"></ul>
       </div>
+      <a href="/">
+        <button>home</button>
+      </a>
     </div>
+    
   );
 }
