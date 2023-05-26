@@ -6,7 +6,7 @@ export default function TodoForm(props) {
   const [todos, setTodos] = useState([]);
 
   return (
-    <div>
+    <div className = "goalspage">
       <header>
         <h1>FT and GN Todo List</h1>
       </header>
