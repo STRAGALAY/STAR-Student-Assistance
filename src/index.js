@@ -3,9 +3,11 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 
 import App from "./App";
-import Header2 from "./components/layout/Header2";
+import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
-import TodoForm from './components/GoalTracking/Goalsorsoemthing'
+
+import TodoForm from "./components/GoalTracking/Goalsorsoemthing";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -14,16 +16,16 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <>
-        <Header2 />
+        <Header />
         <App />
         {/* <Footer /> */}
       </>
     ),
   },
   { path: "/asd", element: <div>Bruh</div> },
-  { path: "/dashboard", element: <h1>Dashboard</h1> },
+  { path: "/dashboard", element: <Dashboard /> },
+  { path: "/goals", element: <TodoForm /> },
   { path: "*", element: <div>Nothing</div> },
-  {path: "/goals", element: <TodoForm />},
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

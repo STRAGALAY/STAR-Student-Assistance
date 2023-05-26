@@ -37,20 +37,6 @@ html {
   --blue-comp-5: #e8f1f2;
 }
 
-.header {
-  display: flex;
-
-  padding: 0.8rem;
-  font-size: 1.3rem;
-  border-top: 1px solid darkgray;
-  border-bottom: 1px solid darkgray;
-}
-
-.header .brand-label {
-  font-weight: bold;
-  font-size: 2rem;
-}
-
 /* imports -------------------------------- */
 @import "./styles/comps.css";
 
@@ -67,7 +53,6 @@ html {
 .brand-name {
   display: flex;
   padding: 0.5rem;
-  margin-left: 60px;
 }
 .brand-name:hover {
   background-color: lightgrey;
@@ -96,6 +81,7 @@ html {
 
 .search-form {
   display: flex;
+  margin-left: 10rem;
 }
 
 .pfppic {
