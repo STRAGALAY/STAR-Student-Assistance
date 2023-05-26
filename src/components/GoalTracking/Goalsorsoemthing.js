@@ -7,7 +7,7 @@ export default function TodoForm(props) {
 
   return (
     <div className = "goalspage">
-      <header>
+      <header className="todo-header">
         <h1>FT and GN Todo List</h1>
       </header>
       <form>
