@@ -14,7 +14,7 @@
 
 /* Goals page------------------------------------------------------------------------------------- */
 .goalspage {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-image: linear-gradient(120deg, #65f6e3 0%, #00ee14 100%);
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -44,25 +44,24 @@
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
-  background: white;  
+  background: white;
 }
 
-.todo-button{
+.todo-button {
   color: #ff6f47;
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
-  
 }
 
-.todo-button:hover{
+.todo-button:hover {
   color: #f7fffe;
   background: #ff6f47;
   cursor: pointer;
   transition: all 0.4s ease;
 }
 
-.todo-container{
+.todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,9 +72,9 @@
   list-style: none;
 }
 
-
 .todo {
   margin: 0.5rem;
+  /* padding: 1rem; */
   background: white;
   font-size: 1.5rem;
   color: black;
@@ -83,12 +82,11 @@
   justify-content: space-between;
   align-items: center;
   transition: all 1s ease;
+  word-wrap: break-word;
+  overflow-x: auto;
 }
 .filter-todo {
   padding: 1rem;
-}
-.todo li {
-  flex: 1;
 }
 
 .trash-btn,
@@ -105,11 +103,6 @@
 }
 .todo-item {
   padding: 0rem 0.5rem;
-}
-
-.fa-trash,
-.fa-check {
-  pointer-events: none;
 }
 
 .fall {
