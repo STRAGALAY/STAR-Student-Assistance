@@ -9,6 +9,14 @@ export default function Header() {
   const googleRef = useRef();
   const [hovered, setHovered] = useState(false);
   const [input, setInput] = useState("");
+  const [count, setCount] = useState(0);
+
+  function handleKey(event) {   
+    setCount((p) => p + 1); 
+  } useEffect(() => {
+    
+    document.addEventListener('keydown', handleKey)
+  }, []);
 
   useEffect(() => {
     allText.current.addEventListener("mouseover", () => {
@@ -85,6 +93,7 @@ export default function Header() {
             ></img>
             <h1>profiles</h1>
             <p>johnny</p>
+            <p2> # of characters added: {count}</p2>
           </div>
         )}
       </>
