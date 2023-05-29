@@ -38,18 +38,19 @@ export default function Header() {
     <div className="header-2">
       <TemporaryDrawer
         drawerItems={[
-          // <a href="asxd">ddd</a>
           { text: "Goals", icon: ListItemIcon, onClick: () => null },
           { text: "Course Folders", icon: ListItemIcon, onClick: () => null },
           { text: "Resources", icon: ListItemIcon, onClick: () => null },
         ]}
       />
-      <div ref={allText} className="brand-name">
-        <div ref={googleRef} className="brand-name-1">
-          STAR
+      <a href="/" style={{ textDecoration: "none" }}>
+        <div ref={allText} className="brand-name">
+          <div ref={googleRef} className="brand-name-1">
+            STAR
+          </div>
+          <div className="brand-name-2">&#8212;SA</div>
         </div>
-        <div className="brand-name-2">&#8212;SA</div>
-      </div>
+      </a>
 
       <form className="search-form" onSubmit={handleSubmit}>
         <input
