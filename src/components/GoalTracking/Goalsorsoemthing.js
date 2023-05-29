@@ -5,14 +5,41 @@ export default function TodoForm(props) {
   const [items, setItems] = useState([]);
   const [todos, setTodos] = useState([]);
 
+  function addTodo(event) {
+    event.preventDefault();
+    if (input.trim() === "") {
+      return;
+    }
+    setTodos((prevTodos) => {
+      return [...prevTodos, input];
+    });
+    setInput("");
+  }
+
+  function handleKey(event) {
+    if (event.key == 'Enter') {
+      addTodo(event)
+    }
+  }
+
   return (
-    <div className = "goalspage">
+    <div className="goalspage">
       <header className="todo-header">
         <h1>FT and GN Todo List</h1>
       </header>
-      <form>
-        <input type="text" class="todo-input" />
-        <button class="todo-button" type="submit">
+      <div className="todo-form">
+        <input
+          type="text"
+          class="todo-input"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleKey}
+        />
+        <button
+          class="todo-button"
+          onClick={addTodo}
+          
+        >
           Add
         </button>
         <div class="select">
@@ -22,14 +49,17 @@ export default function TodoForm(props) {
             <option value="uncompleted">Uncompleted</option>
           </select>
         </div>
-      </form>
+      </div>
       <div class="todo-container">
-        <ul class="todo-list"></ul>
+        <ul class="todo-list">
+          {todos.map((todo) => (
+            <div>{todo}</div>
+          ))}
+        </ul>
       </div>
       <a href="/">
         <button>home</button>
       </a>
     </div>
-    
   );
 }
