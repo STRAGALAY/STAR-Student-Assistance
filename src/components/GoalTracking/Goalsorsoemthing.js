@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function TodoForm(props) {
   const [input, setInput] = useState("");
-  const [items, setItems] = useState([]);
   const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    const prevTodos = localStorage.getItem("todos");
+    if (prevTodos == null) {
+      localStorage.setItem("todos", "[]");
+      return;
+    }
+
+    setTodos(JSON.parse(prevTodos));
+  }, []);
 
   function addTodo(event) {
     event.preventDefault();
@@ -13,13 +22,31 @@ export default function TodoForm(props) {
     setTodos((prevTodos) => {
       return [...prevTodos, input];
     });
+
+    const prevTodos = JSON.parse(localStorage.getItem("todos"));
+    localStorage.setItem("todos", JSON.stringify([...prevTodos, input]));
+
     setInput("");
   }
 
   function handleKey(event) {
-    if (event.key == 'Enter') {
-      addTodo(event)
+    if (event.key == "Enter") {
+      addTodo(event);
     }
+  }
+  function onTodoClick(e) {
+    // const item = e.target;
+    // const todo = item.parentElement.parentElement[0].innerText
+
+    // if (item === "trash-btn") {
+    //   todos.splice(todos.indexOf(todoIndex), 1);
+    //   localStorage.setItem("todos", JSON.stringify(todos));
+    // }
+
+    // if (todo === "complete-btn") {
+    //   todo.classList.toggle("completed");
+    //   todo.classList.toggle("not-comp");
+    // }
   }
 
   return (
@@ -35,11 +62,7 @@ export default function TodoForm(props) {
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKey}
         />
-        <button
-          class="todo-button"
-          onClick={addTodo}
-          
-        >
+        <button class="todo-button" onClick={addTodo}>
           Add
         </button>
         <div class="select">
@@ -53,13 +76,16 @@ export default function TodoForm(props) {
       <div class="todo-container">
         <ul class="todo-list">
           {todos.map((todo) => (
-            <div>{todo}</div>
+            <div className="todo" onClick={onTodoClick}>
+              <div className="todo-item">{todo}</div>
+              <div>
+                <button className="complete-btn">Complete</button>
+                <button className="trash-btn">Trash</button>
+              </div>
+            </div>
           ))}
         </ul>
       </div>
-      <a href="/">
-        <button>home</button>
-      </a>
     </div>
   );
 }
