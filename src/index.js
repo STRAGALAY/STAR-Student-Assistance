@@ -6,7 +6,7 @@ import App from "./App";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 
-import TodoForm from "./components/GoalTracking/Goalsorsoemthing";
+import GoalTrackingPage from "./components/GoalTracking/GoalTrackingPage";
 import Dashboard from "./components/Dashboard/Dashboard";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
   },
   { path: "/asd", element: <div>Bruh</div> },
   { path: "/dashboard", element: <Dashboard /> },
-  { path: "/goals", element: <TodoForm /> },
+  { path: "/goals", element: <GoalTrackingPage /> },
   { path: "*", element: <div>Nothing</div> },
 ]);
 

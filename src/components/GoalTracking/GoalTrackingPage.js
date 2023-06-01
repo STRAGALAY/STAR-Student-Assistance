@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function TodoForm(props) {
+export default function GoalTrackingPage(props) {
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState([]);
 
