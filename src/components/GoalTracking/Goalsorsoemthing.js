@@ -35,18 +35,6 @@ export default function TodoForm(props) {
     }
   }
   function onTodoClick(e) {
-    // const item = e.target;
-    // const todo = item.parentElement.parentElement[0].innerText
-
-    // if (item === "trash-btn") {
-    //   todos.splice(todos.indexOf(todoIndex), 1);
-    //   localStorage.setItem("todos", JSON.stringify(todos));
-    // }
-
-    // if (todo === "complete-btn") {
-    //   todo.classList.toggle("completed");
-    //   todo.classList.toggle("not-comp");
-    // }
   }
 
   return (
