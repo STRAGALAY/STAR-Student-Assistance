@@ -35,19 +35,25 @@ export default function TodoForm(props) {
     }
   }
   function onTodoClick(e) {
-    // const item = e.target;
-    // const todo = item.parentElement.parentElement[0].innerText
+    const button = e.target;
+    const buttonClass = button.classList[0];
+    const todo = button.parentElement.parentElement.children[0];
+    console.log(todo.innerText);
 
-    // if (item === "trash-btn") {
-    //   todos.splice(todos.indexOf(todoIndex), 1);
-    //   localStorage.setItem("todos", JSON.stringify(todos));
-    // }
+    if (buttonClass === "complete-btn") {
+      todo.classList.toggle("completed");
+    }
 
-    // if (todo === "complete-btn") {
-    //   todo.classList.toggle("completed");
-    //   todo.classList.toggle("not-comp");
-    // }
+    if (buttonClass === "trash-btn") {
+      setTodos((prevTodos) => {
+        const newTodos = prevTodos.filter((t) => t != todo.innerText);
+        localStorage.setItem("todos", JSON.stringify(newTodos));
+
+        return newTodos;
+      });
+    }
   }
+
 
   return (
     <div className="goalspage">
@@ -89,4 +95,3 @@ export default function TodoForm(props) {
     </div>
   );
 }
-    

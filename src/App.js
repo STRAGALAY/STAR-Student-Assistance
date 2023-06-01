@@ -8,6 +8,7 @@ export default function App() {
 
   function handleKey(event) {
     console.log("as");
+    
     // if (event.key == "Enter","a") {
     setCount((p) => p + 1); 
     // }
