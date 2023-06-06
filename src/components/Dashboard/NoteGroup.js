@@ -5,8 +5,8 @@ export default function NoteGroup() {
   const params = useParams();
 
   useEffect(() => {
-    console.log(params)
-  }.[])
+    console.log(params);
+  }, []);
 
   return (
     <div className="dashboard-page">
