@@ -38,15 +38,16 @@ export default function GoalTrackingPage(props) {
     const button = e.target;
     const buttonClass = button.classList[0];
     const todo = button.parentElement.parentElement.children[0];
-    console.log(todo.innerText);
+    
 
     if (buttonClass === "complete-btn") {
       todo.classList.toggle("completed");
     }
 
-    if (buttonClass === "trash-btn") {
+    else if (buttonClass === "trash-btn") {
       setTodos((prevTodos) => {
         const newTodos = prevTodos.filter((t) => t != todo.innerText);
+        // const newTodos = prevTodos.splice(prevTodos.indexOf(todo.innerText))
         localStorage.setItem("todos", JSON.stringify(newTodos));
 
         return newTodos;
