@@ -9,7 +9,13 @@ import Footer from "./components/layout/Footer";
 import GoalTrackingPage from "./components/GoalTracking/GoalTrackingPage";
 import Dashboard from "./components/Dashboard/Dashboard";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  BrowserRouter,
+} from "react-router-dom";
+import NoteGroup from "./components/Dashboard/NoteGroup";
+import { Routes, Route } from "react-router";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +29,7 @@ const router = createBrowserRouter([
   },
   { path: "/asd", element: <div>Bruh</div> },
   { path: "/dashboard", element: <Dashboard /> },
+  { path: "/note/:category", element: <NoteGroup /> },
   { path: "/goals", element: <GoalTrackingPage /> },
   { path: "*", element: <div>Nothing</div> },
 ]);
@@ -31,7 +38,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Header />
-    <RouterProvider router={router} />
+    {/* <RouterProvider router={router} /> */}
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
