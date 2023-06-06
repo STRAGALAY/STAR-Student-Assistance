@@ -1,12 +1,18 @@
-import { useLocation } from "react-router";
+import { useParams } from "react-router";
+import { useEffect } from "react";
 
 export default function NoteGroup() {
-  const location = useLocation();
+  const { category } = useParams();
+
+  useEffect(() => {
+    //
+  }, []);
 
   return (
-    <div>
-      <h1>Note Group</h1>
-      {location.pathname}
+    <div className="dashboard-page">
+      <h1>NoteGroup</h1>
+      {/* {JSON.stringify(params)} */}
+      <h2>A: {category}</h2>
     </div>
   );
 }
