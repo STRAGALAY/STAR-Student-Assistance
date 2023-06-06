@@ -26,7 +26,14 @@ export default function App() {
       <button onClick={() => setCount((p) => p - 1)}>Down 1</button>
 
       <a href="/goals">
-        <button>aksdsadddd</button>
+        <button className="goals-button">
+        <img
+              className="goalspic"
+              src="https://img.freepik.com/free-vector/positive-tiny-people-sitting-walking-near-huge-target-with-arrow-isolated-flat-vector-illustration-cartoon-business-team-achieving-goal-aim-marketing-strategy-achievement-concept_74855-10139.jpg?t=st=1685989671~exp=1685990271~hmac=cef3442898edaa479d462947089e4c953c0bf35d8da91a6f34374cfacdd2fe08"
+              width="85"
+              height="85"
+              
+            ></img></button>
       </a>
 
       <div>alksjd</div>

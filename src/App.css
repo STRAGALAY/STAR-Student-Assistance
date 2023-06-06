@@ -117,3 +117,11 @@ html {
   padding: 1rem;
   background-color: gray;
 }
+
+.goalspic{
+  position: absolute;
+  border-radius: 50%;
+  bottom: 0em;
+  right: 0em;
+  cursor: pointer;
+}
