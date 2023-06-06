@@ -15,7 +15,6 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import NoteGroup from "./components/Dashboard/NoteGroup";
-import { Routes, Route } from "react-router";
 
 const router = createBrowserRouter([
   {
@@ -38,10 +37,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Header />
-    {/* <RouterProvider router={router} /> */}
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
