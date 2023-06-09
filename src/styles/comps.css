@@ -25,6 +25,14 @@
   width: 60%;
 }
 
+.headertop {
+  font-size: 72px;
+}
+
+.headerbot {
+  font-size: 20px;
+    line-height: 28px;
+}
 
 /* Goals page------------------------------------------------------------------------------------- */
 .goalspage {

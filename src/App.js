@@ -18,9 +18,9 @@ export default function App() {
         <div className="side right-side">
           <img
             className="dashboard-img"
-            src="https://img.freepik.com/free-vector/positive-tiny-people-sitting-walking-near-huge-target-with-arrow-isolated-flat-vector-illustration-cartoon-business-team-achieving-goal-aim-marketing-strategy-achievement-concept_74855-10139.jpg?t=st=1685989671~exp=1685990271~hmac=cef3442898edaa479d462947089e4c953c0bf35d8da91a6f34374cfacdd2fe08"
-            width="85"
-            height="85"
+            src="https://images.ctfassets.net/9haz2glq4wt0/3xY2T0RH0qoiyJWD0SS0CI/b4b3949bdf1420e9c34200f6d7429a12/1_14H3oKuTWKAhO95WRu3xzA.png"
+            // width="85"
+            // height="85"
           />
         </div>
       </div>
