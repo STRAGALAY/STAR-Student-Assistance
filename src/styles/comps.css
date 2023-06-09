@@ -15,6 +15,7 @@
 /* Homepage styles */
 .homepage-panel-1 {
   display: flex;
+  justify-content: space-between;
 }
 
 .side {
@@ -22,16 +23,31 @@
 }
 
 .homepage-panel-1 .left-side {
-  width: 60%;
+  width: 50%;
+}
+
+.homepage-panel-1 .right-side {
+  display: flex;
+  align-items: center;
 }
 
 .headertop {
-  font-size: 72px;
+  font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
 .headerbot {
-  font-size: 20px;
-    line-height: 28px;
+  font-size: 1.3rem;
+  color: gray;
+  margin-bottom: 2rem;
+}
+
+.notes-direct {
+  padding: 1rem 3rem !important;
+}
+
+.dashboard-img {
+  width: 33rem;
 }
 
 /* Goals page------------------------------------------------------------------------------------- */

@@ -36,7 +36,7 @@ html {
   --blue-comp-4: #1b98e0;
   --blue-comp-5: #e8f1f2;
 
-  height: 500vh;
+  height: 1000vh;
 }
 
 /* imports -------------------------------- */
@@ -47,7 +47,7 @@ html {
   align-items: center;
 
   background-color: white;
-  border: solid 1px;
+  border: solid 1px lightgray;
   padding: 0.5rem;
   cursor: pointer;
 }

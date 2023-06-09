@@ -38,18 +38,12 @@ export default function GoalTrackingPage(props) {
     const button = e.target;
     const buttonClass = button.classList[0];
     const todo = button.parentElement.parentElement.children[0];
-    
 
     if (buttonClass === "complete-btn") {
-    todo.classList.toggle("completed");
-
-      
-    }
-
-    else if (buttonClass === "trash-btn") {
+      todo.classList.toggle("completed");
+    } else if (buttonClass === "trash-btn") {
       setTodos((prevTodos) => {
         const newTodos = prevTodos.filter((t) => t != todo.innerText);
-        // const newTodos = prevTodos.splice(prevTodos.indexOf(todo.innerText))
         localStorage.setItem("todos", JSON.stringify(newTodos));
 
         return newTodos;
@@ -57,10 +51,7 @@ export default function GoalTrackingPage(props) {
     }
   }
 
-  
-
-
-
+  // localStorage.setItem("todos", "[]");
   return (
     <div className="goalspage">
       <header className="todo-header">
@@ -80,7 +71,7 @@ export default function GoalTrackingPage(props) {
         <div class="select">
           <select name="todos" class="filter-todo">
             <option value="all">All</option>
-            <option  value="completed">Completed</option>
+            <option value="completed">Completed</option>
             <option value="uncompleted">Uncompleted</option>
           </select>
         </div>

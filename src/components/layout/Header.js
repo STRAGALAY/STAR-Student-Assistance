@@ -73,10 +73,7 @@ export default function Header() {
       </form>
 
       <div className="profile-btn">
-        <Button
-          onClick={() => setPopupOpen((prev) => !prev)}
-          className="pfpbutton"
-        >
+        <Button onClick={() => setPopupOpen((prev) => !prev)} className="pfpbutton">
           <Person2Icon />
           Open
         </Button>
