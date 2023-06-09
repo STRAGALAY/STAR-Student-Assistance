@@ -1,30 +1,20 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+
 
 // npm set strict-ssl false
 
 export default function App() {
-  const [count, setCount] = useState(0);
-
-  function handleKey(event) {
-    console.log("as");
-    
-    // if (event.key == "Enter","a") {
-    setCount((p) => p + 1); 
-    // }
-  }
-
-  useEffect(() => {
-    //
-    document.addEventListener('keydown', handleKey)
-  }, []);
+ 
 
   return (
     <div className="app" >
-      <div >{count}</div>
-      <button onClick={() => setCount((p) => p + 1)}>Up 1</button>
-      <button onClick={() => setCount((p) => p - 1)}>Down 1</button>
-
+      <div className = 'headertop'>Build your best ideas together, in FT GN Notes App</div>
+      <div className = 'headerbot'>Create local documents in real-time and from any device.</div>
+      <a href='/dashboard'> 
+        <button className='notes-direct'>
+          Go to Notes
+        </button>
+      </a>
       <a href="/goals">
         <button className="goals-button">
         <img
@@ -36,7 +26,7 @@ export default function App() {
             ></img></button>
       </a>
 
-      <div>alksjd</div>
+
     </div>
   );
 }

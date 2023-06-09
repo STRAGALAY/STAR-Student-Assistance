@@ -41,7 +41,9 @@ export default function GoalTrackingPage(props) {
     
 
     if (buttonClass === "complete-btn") {
-      todo.classList.toggle("completed");
+    todo.classList.toggle("completed");
+
+      
     }
 
     else if (buttonClass === "trash-btn") {
@@ -54,6 +56,9 @@ export default function GoalTrackingPage(props) {
       });
     }
   }
+
+  
+
 
 
   return (
@@ -75,7 +80,7 @@ export default function GoalTrackingPage(props) {
         <div class="select">
           <select name="todos" class="filter-todo">
             <option value="all">All</option>
-            <option value="completed">Completed</option>
+            <option  value="completed">Completed</option>
             <option value="uncompleted">Uncompleted</option>
           </select>
         </div>
