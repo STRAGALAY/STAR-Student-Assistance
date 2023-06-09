@@ -35,6 +35,8 @@ html {
   --blue-comp-3: #247ba0;
   --blue-comp-4: #1b98e0;
   --blue-comp-5: #e8f1f2;
+
+  height: 500vh;
 }
 
 /* imports -------------------------------- */
