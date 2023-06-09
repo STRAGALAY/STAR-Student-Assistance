@@ -1,4 +1,5 @@
 import "./App.css";
+import { Button } from "@mui/material";
 
 // npm set strict-ssl false
 
@@ -11,7 +12,9 @@ export default function App() {
           <div className="headerbot">Create local documents in real-time and from any device.</div>
 
           <a href="/dashboard">
-            <button className="notes-direct">Go to Notes</button>
+            <Button variant="contained" className="notes-direct">
+              Go to Notes
+            </Button>
           </a>
         </div>
 
