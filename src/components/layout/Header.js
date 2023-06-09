@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import TemporaryDrawer from "../TemporaryDrawer";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Button from "@mui/material/Button";
@@ -11,11 +11,11 @@ export default function Header() {
   const [input, setInput] = useState("");
   const [count, setCount] = useState(0);
 
-  function handleKey(event) {   
-    setCount((p) => p + 1); 
-  } useEffect(() => {
-    
-    document.addEventListener('keydown', handleKey)
+  function handleKey(event) {
+    setCount((p) => p + 1);
+  }
+  useEffect(() => {
+    document.addEventListener("keydown", handleKey);
   }, []);
 
   useEffect(() => {
