@@ -3,7 +3,7 @@ import "./App.css";
 import { Button } from "@mui/material";
 import Dashboard from "./components/Dashboard/Dashboard";
 import GoalTrackingPage from "./components/GoalTracking/GoalTrackingPage";
-import NoteGroup from "./components/Dashboard/NoteGroup";
+import NoteGroup from "./components/Dashboard/NoteCategory";
 
 // npm set strict-ssl false
 
@@ -15,6 +15,22 @@ export default function App() {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/goals" element={<GoalTrackingPage />} />
       <Route path="/note/:category" element={<NoteGroup />} />
+
+      <Route
+        path="*"
+        element={
+          <h1
+            style={{
+              height: "80vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            404
+          </h1>
+        }
+      />
     </Routes>
   );
 }
@@ -38,7 +54,6 @@ function Home() {
           <img
             className="dashboard-img"
             src="https://images.ctfassets.net/9haz2glq4wt0/3xY2T0RH0qoiyJWD0SS0CI/b4b3949bdf1420e9c34200f6d7429a12/1_14H3oKuTWKAhO95WRu3xzA.png"
-            // width="500"
           />
         </div>
       </div>

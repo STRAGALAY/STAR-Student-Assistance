@@ -7,6 +7,8 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import { NotesProvider } from "./contexts/NotesProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,10 +16,14 @@ root.render(
     <Header />
 
     <BrowserRouter>
-      <App />
+      <ThemeProvider theme={{}}>
+        <NotesProvider>
+          <App />
+        </NotesProvider>
+      </ThemeProvider>
     </BrowserRouter>
 
-    <Footer />
+    {/* <Footer /> */}
   </React.StrictMode>
 );
 
