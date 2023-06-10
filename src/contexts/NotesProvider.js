@@ -14,15 +14,15 @@ const defaultNoteCategories = Array.from({ length: 6 }, (_v, i) => {
 
 export function NotesProvider({ children }) {
   /**
-   * @TODO : remove entirely, only store important project info
+   * @TODO: remove entirely, only store important project info
    * (title, last modified) here.
-   * then on each route, store each blog/resource independently
+   * then on each route, store each note independently
    * in LS
    * This so there isnt 1 huge LS value
    */
   const [notesCategories, setNotesCategories] = useLocalStorage(
     LOCAL_STORAGE_KEYS.NotesCategories,
-    defaultNoteCategories
+    defaultNoteCategories,
   );
 
   return (

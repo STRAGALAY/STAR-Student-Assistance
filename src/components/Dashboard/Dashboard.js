@@ -1,18 +1,10 @@
-// export default function Dashboard() {
-//   return (
-//     <div className="dashboard-page">
-//       <h1>Dashboard</h1>
-//     </div>
-//   );
-// }
-
 import NoteTemplateRow from "./NoteTemplateRow";
 import styled from "styled-components";
 import { useNotes } from "../../contexts/NotesProvider";
 import Input from "@mui/material/Input";
 
 export default function ResourcesNotes() {
-  const { notesCategories, setNotesCategories } = useNotes();
+  const { notesCategories } = useNotes();
 
   return (
     <div className="dashboard-page">
