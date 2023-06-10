@@ -1,9 +1,25 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Button } from "@mui/material";
+import Dashboard from "./components/Dashboard/Dashboard";
+import GoalTrackingPage from "./components/GoalTracking/GoalTrackingPage";
+import NoteGroup from "./components/Dashboard/NoteGroup";
 
 // npm set strict-ssl false
 
 export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/asd" element={<div>Bruh</div>} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/goals" element={<GoalTrackingPage />} />
+      <Route path="/note/:category" element={<NoteGroup />} />
+    </Routes>
+  );
+}
+
+function Home() {
   return (
     <div className="app">
       <div className="homepage-panel-1">
