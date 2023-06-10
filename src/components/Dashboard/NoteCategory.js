@@ -38,9 +38,9 @@ const AUTOSAVE_SECONDS_INTERVAL = 3;
 
 export default function NoteCategory() {
   const [noteCategory, setNoteCategory] = useState(null);
-  const { notesCategories } = useNotes();
-
   const [mde, setMde] = useState(null);
+
+  const { notesCategories, setNotesCategories } = useNotes();
 
   const params = useParams();
 
@@ -58,14 +58,16 @@ export default function NoteCategory() {
 
       const updatedNote = {
         ...noteCategory,
-        body: mde.value(),
+        lastSaved: Date.now(),
+        body: mde?.value() ?? noteCategory.body,
       };
 
       setNoteCategory(updatedNote);
       return updatedNote;
     });
 
-    setNoteCategory(updatedNotes);
+    setNotesCategories(updatedNotes);
+    console.log("saving...");
   };
 
   // auto save project details
@@ -77,7 +79,7 @@ export default function NoteCategory() {
     return () => {
       clearInterval(interval);
     };
-  }, [saveNote, noteCategory]);
+  }, [saveNote, mde]);
 
   if (noteCategory == null) return <h1>Error: Can&apos;t find the note</h1>;
   return (
@@ -114,11 +116,7 @@ export default function NoteCategory() {
         <ProjectEditorContainer>
           <MetadataFormContainer>
             <PortionHeader>The Body</PortionHeader>
-            <MDEditor
-              placeholderText={"## Space starts here\n\nand ends here"}
-              mdeRecordSetter={setMde}
-              initialValue={noteCategory.body}
-            />
+            <MDEditor mdeRecordSetter={setMde} initialValue={noteCategory.body} />
           </MetadataFormContainer>
 
           {/* <p>End</p> */}

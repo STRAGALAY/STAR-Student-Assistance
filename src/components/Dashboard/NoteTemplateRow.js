@@ -10,7 +10,7 @@ export default function NoteTemplateRow({ note }) {
         <Input disabled type="checkbox" />
 
         <ResourceProjectTitle href={`/note/${note.id}`}>{note.name}</ResourceProjectTitle>
-        <ModifiedTimeStamp>Last opened {latestTimeAgo(note.lastSaved)} ago</ModifiedTimeStamp>
+        <ModifiedTimeStamp>Last viewed {latestTimeAgo(note.lastSaved)} ago</ModifiedTimeStamp>
       </NoteInformationContainer>
 
       <NoteControlContainer>
