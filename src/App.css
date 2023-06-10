@@ -16,18 +16,18 @@ html {
   ); */
   /* background: linear-gradient(90deg, white, darkgray); */
   background-color: whitesmoke;
-  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-    "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
 }
 
 .app {
   --header-background: #acacac;
   --header-height: 5rem;
 
-  --clean-box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
-    0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
-  --clean-box-shadow-light: 0px 0px 0px 0px rgb(0 0 0 / 20%),
-    0px 0px 0px 0px rgb(0 0 0 / 14%), 0px 1px 1px 0px rgb(0 0 0 / 12%);
+  --clean-box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%),
+    0px 1px 5px 0px rgb(0 0 0 / 12%);
+  --clean-box-shadow-light: 0px 0px 0px 0px rgb(0 0 0 / 20%), 0px 0px 0px 0px rgb(0 0 0 / 14%),
+    0px 1px 1px 0px rgb(0 0 0 / 12%);
 
   /* blue-themed colour composition */
   --blue-comp-1: #13293d;
@@ -120,10 +120,15 @@ html {
   background-color: gray;
 }
 
-.goalspic{
-  position: absolute;
+.goals-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+
+  border: none;
   border-radius: 50%;
-  bottom: 0em;
-  right: 0em;
   cursor: pointer;
+}
+.goalspic {
+  border-radius: 50%;
 }
