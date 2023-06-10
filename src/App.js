@@ -14,7 +14,7 @@ export default function App() {
       <Route path="/asd" element={<div>Bruh</div>} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/goals" element={<GoalTrackingPage />} />
-      <Route path="/note/:category" element={<NoteGroup />} />
+      <Route path="/note/:id" element={<NoteGroup />} />
 
       <Route
         path="*"

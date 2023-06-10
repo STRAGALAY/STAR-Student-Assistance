@@ -32,6 +32,7 @@ import {
 } from "./DashboardStyling";
 import { useNotes } from "../../contexts/NotesProvider";
 import { useParams } from "react-router-dom/dist";
+import Button from "@mui/material/Button";
 
 const AUTOSAVE_SECONDS_INTERVAL = 3;
 
@@ -40,57 +41,54 @@ export default function NoteCategory() {
   const { notesCategories } = useNotes();
 
   const [mde, setMde] = useState(null);
-  const [noteBodyHelperMsg, setBlogBodyHelperMsg] = useState("");
 
   const params = useParams();
 
   // update post with url params
   useEffect(() => {
-    if (params.category == null) return;
+    if (params.id == null) return;
 
-    const note = notesCategories.find((note) => note.id === router.query.id);
+    const note = notesCategories.find((note) => note.id === params.id);
     setNoteCategory(note);
-    reset({ ...note });
-    setTags(note.tags);
-  }, [router.query.id]);
+  }, [params.id, notesCategories]);
 
-  const saveProject = (extraAttributes) => {
-    const updatedProjects = notesCategories.map((project) => {
-      if (project.id !== router.query.id) return project;
+  const saveNote = () => {
+    const updatedNotes = notesCategories.map((project) => {
+      if (project.id !== params.id) return project;
 
-      const updatedProject = {
+      const updatedNote = {
         ...noteCategory,
         body: mde.value(),
-
-        ...extraAttributes,
       };
 
-      setNoteCategory(updatedProject);
-      return updatedProject;
+      setNoteCategory(updatedNote);
+      return updatedNote;
     });
 
-    setBlogTemplates(updatedProjects);
+    setNoteCategory(updatedNotes);
   };
 
   // auto save project details
   useEffect(() => {
     let interval = setInterval(() => {
-      saveProject();
+      saveNote();
     }, AUTOSAVE_SECONDS_INTERVAL * 1000);
 
     return () => {
       clearInterval(interval);
     };
-  }, [saveProject, noteCategory]);
+  }, [saveNote, noteCategory]);
 
   if (noteCategory == null) return <h1>Error: Can&apos;t find the note</h1>;
   return (
-    <BlogProjectEditorContainer>
+    <NoteCategoryEditorContainer>
       <AdminProjectHeader>
         {/* TODO: extract inline css later () */}
         <section style={{ display: "flex", alignItems: "center" }}>
-          <Button onClick={() => alert("Coming soon")}>Menu</Button>
-          <Button>
+          <Button variant="contained" onClick={() => alert("Coming soon")}>
+            Menu
+          </Button>
+          <Button variant="contained">
             <SeeProjectsLink href="/resources/admin">Dashboard</SeeProjectsLink>
           </Button>
 
@@ -99,7 +97,9 @@ export default function NoteCategory() {
 
         {/* also extract this css later */}
         <section style={{ marginRight: "20rem" }}>
-          <Button onClick={handleSubmit(handleSubmitBlog)}>Publish</Button>
+          <Button variant="contained" onClick={() => console.log("nothing will happen")}>
+            Publish
+          </Button>
         </section>
       </AdminProjectHeader>
 
@@ -119,18 +119,17 @@ export default function NoteCategory() {
               mdeRecordSetter={setMde}
               initialValue={noteCategory.body}
             />
-            <InputErrorHelper>{noteBodyHelperMsg}</InputErrorHelper>
           </MetadataFormContainer>
 
           {/* <p>End</p> */}
         </ProjectEditorContainer>
       </AdminProjectEditorContainer>
-    </BlogProjectEditorContainer>
+    </NoteCategoryEditorContainer>
   );
 }
 
 // Template for changes to page container styles
-const BlogProjectEditorContainer = styled.div`
+const NoteCategoryEditorContainer = styled.div`
   /*  */
 `;
 

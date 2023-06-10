@@ -14,9 +14,15 @@ export default function NoteTemplateRow({ note }) {
       </NoteInformationContainer>
 
       <NoteControlContainer>
-        <Button onClick={() => alert("Coming soon")}>Copy</Button>
-        <Button onClick={() => alert("Coming soon")}>Archive</Button>
-        <Button onClick={() => alert("Coming soon")}>Trash</Button>
+        <Button variant="outlined" onClick={() => alert("Coming soon")}>
+          Copy
+        </Button>
+        <Button variant="outlined" onClick={() => alert("Coming soon")}>
+          Archive
+        </Button>
+        <Button variant="outlined" onClick={() => alert("Coming soon")}>
+          Trash
+        </Button>
       </NoteControlContainer>
     </NoteTemplateRowWrapper>
   );
