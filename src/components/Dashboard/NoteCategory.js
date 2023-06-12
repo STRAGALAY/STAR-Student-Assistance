@@ -91,10 +91,10 @@ export default function NoteCategory() {
             Menu
           </Button>
           <Button variant="contained">
-            <SeeProjectsLink href="/resources/admin">Dashboard</SeeProjectsLink>
+            <SeeProjectsLink href="/dashboard">Dashboard</SeeProjectsLink>
           </Button>
 
-          <ProjectName>Current project: {noteCategory.name}</ProjectName>
+          <ProjectName>Note: {noteCategory.name}</ProjectName>
         </section>
 
         {/* also extract this css later */}
