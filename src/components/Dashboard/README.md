@@ -6,9 +6,6 @@ There are many functions which we have not yet implemented due to time; utility 
 ![image](https://github.com/STRAGALAY/STAR-Student-Assistance/assets/90778447/706d1983-3c93-4c4a-94b7-63f52165dca2)
 Displays the time next to the note name. When the note name is clicked, it redirects the user to that targeted notes page.
 
-![image](https://github.com/STRAGALAY/STAR-Student-Assistance/assets/90778447/847ebf13-4fef-482f-8ae1-a909f95ff71f)
-
-
 <br/>
 <br/>
 <br/>
