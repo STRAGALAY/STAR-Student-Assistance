@@ -2,8 +2,9 @@
 ![image](https://github.com/STRAGALAY/STAR-Student-Assistance/assets/90625393/d0952bdb-8a9a-4e7a-a56f-113b99f5062a)
 There are many functions which we have not yet implemented due to time; utility sidebar, menu, search bar, and copy, archive, trash button.
 
-
+### Last viewed
 ![image](https://github.com/STRAGALAY/STAR-Student-Assistance/assets/90778447/706d1983-3c93-4c4a-94b7-63f52165dca2)
+<br/>
 Displays the time next to the note name. When the note name is clicked, it redirects the user to that targeted notes page.
 
 <br/>
