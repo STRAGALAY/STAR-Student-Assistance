@@ -3,6 +3,12 @@ import styled from "styled-components";
 const HEADER_COLOUR = "#1e2530";
 const HEADER_HEIGHT = "7vh";
 
+/**
+ * Styling for the dashboard and note category pages.
+ * They are reusable to make future pages using a similar page format
+ * to the note pages.
+ */
+
 //
 // ----------- header styles -------------------
 //

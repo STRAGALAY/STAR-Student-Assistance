@@ -20,7 +20,7 @@ export default function NoteTemplateRow({ note }) {
         <Button variant="outlined" onClick={() => alert("Coming soon")}>
           Archive
         </Button>
-        <Button variant="outlined" onClick={() => alert("Coming soon")}>
+        <Button variant="contained" color="error" onClick={() => alert("Coming soon")}>
           Trash
         </Button>
       </NoteControlContainer>
