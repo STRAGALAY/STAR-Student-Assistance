@@ -44,6 +44,8 @@ export default function NoteCategory() {
 
   const params = useParams();
 
+  useEffect(() => {}, []);
+
   // update post with url params
   useEffect(() => {
     if (params.id == null) return;
@@ -79,7 +81,8 @@ export default function NoteCategory() {
     return () => {
       clearInterval(interval);
     };
-  }, [saveNote, mde]);
+    // @TODO: remove mde??
+  }, [saveNote]);
 
   if (noteCategory == null) return <h1>Error: Can&apos;t find the note</h1>;
   return (

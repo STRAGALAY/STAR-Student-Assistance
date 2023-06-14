@@ -33,7 +33,7 @@ export default function ResourcesNotes() {
               type={"text"}
               style={{ width: "90%", marginTop: ".5rem" }}
               placeholder="Search projects (Coming soon..)"
-              disabled
+              // disabled
               onClick={() => alert("being made")}
             />
 
